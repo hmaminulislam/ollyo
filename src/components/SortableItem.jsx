@@ -6,7 +6,6 @@ export function SortableItem(props) {
   // dnd style
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id: props.id });
-
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
@@ -14,7 +13,7 @@ export function SortableItem(props) {
 
   return (
     <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      <div className="item">{props.id}</div>
+      <img className="gallary-img" src={props.id} alt="" />
     </div>
   );
 }
